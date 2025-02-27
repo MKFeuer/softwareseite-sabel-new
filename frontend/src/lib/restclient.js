@@ -19,7 +19,6 @@ export class RestClient {
     async getAllContacts() {
         const response = await fetch(this.url);
         const allContacts = await response.json();
-        console.log(allContacts);
         return allContacts;
     }
 

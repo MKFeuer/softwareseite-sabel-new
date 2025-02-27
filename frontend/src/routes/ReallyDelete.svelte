@@ -1,5 +1,5 @@
 <script>
-    import { contactToDelete, FORM_VISIBLE, refreshTable } from "$lib/contacts.svelte";
+    import { contactToDelete, FORM_VISIBLE, refreshTable } from "$lib/entries.svelte"
     import { RestClient } from "$lib/restclient";
     
 

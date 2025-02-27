@@ -1,12 +1,12 @@
 <script>
     import { goto } from "$app/navigation";
     import {
-        contactsInTable,
+        entriesInTable,
         contactToDelete,
         contactToEdit,
         FORM_VISIBLE,
         refreshTable,
-    } from "$lib/contacts.svelte";
+    } from "$lib/entries.svelte"
     import { RestClient } from "$lib/restclient";
     import ReallyDelete from "./ReallyDelete.svelte";
 
@@ -89,23 +89,23 @@
                 </tr>
             </thead>
             <tbody>
-                {#each contactsInTable as contact}
+                {#each entriesInTable as entry}
                     <tr class="contact-row">
                         {#if DEBUG}
-                            <td>{contact.id}</td>
+                            <td>{entry.id}</td>
                         {/if}
-                        <td>{contact.name}</td>
-                        <td>{contact.programm}</td>
-                        <td>{contact.raum}</td>
+                        <td>{entry.name}</td>
+                        <td>{entry.programm}</td>
+                        <td>{entry.raum}</td>
                         <td>
                             <button
                                 onclick={() => {
-                                    editContact(contact);
+                                    editContact(entry);
                                 }}>Edit</button
                             >
                             <button
                                 onclick={() => {
-                                    tempSaveContact(contact);
+                                    tempSaveContact(entry);
                                 }}>-</button
                             >
                         </td>

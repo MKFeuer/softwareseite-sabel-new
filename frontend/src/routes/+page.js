@@ -1,4 +1,5 @@
-import { refreshTable } from "$lib/contacts.svelte";
+import { refreshTable } from "$lib/entries.svelte";
+
 
 //await refreshTable();
 refreshTable();

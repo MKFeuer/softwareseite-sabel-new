@@ -1,6 +1,6 @@
 import { RestClient } from "./restclient";
 
-export let contactsInTable = $state([]);
+export let entriesInTable = $state([]);
 
 //GUI-Variablen
 
@@ -22,10 +22,10 @@ export const refreshTable = async () => {
 
     const allContacts = await restClient.getAllContacts();
     // Clear existing Array
-    contactsInTable.length = 0;
+    entriesInTable.length = 0;
 
     allContacts.forEach(contact => {
-        contactsInTable.push(contact);
+        entriesInTable.push(contact);
     });
 
 };

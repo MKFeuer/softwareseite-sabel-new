@@ -1,19 +1,20 @@
 <script>
     import { goto } from "$app/navigation";
-    import { refreshTable } from "$lib/contacts.svelte";
+    import { refreshTable } from "$lib/entries.svelte";
     import { RestClient } from "$lib/restclient";
     let name = $state("");
     let programm = $state("");
     let raum = $state("");
 
+
     const saveEntry = async () => {
-        const newContactWithoutID = {
+        const newEntryWithoutID = {
             name: name,
             programm: programm,
             raum: raum,
         };
         const restClient = new RestClient();
-        await restClient.createContact(newContactWithoutID);
+        await restClient.createContact(newEntryWithoutID);
 
         //Liste aktualisieren
         await refreshTable();
