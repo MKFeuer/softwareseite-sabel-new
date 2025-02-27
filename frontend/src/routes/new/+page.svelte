@@ -6,7 +6,6 @@
     let programm = $state("");
     let raum = $state("");
 
-
     const saveEntry = async () => {
         const newEntryWithoutID = {
             name: name,
@@ -28,10 +27,10 @@
 </script>
 
 <svelte:head>
-    <title>T3A-Kontakte | New</title>
+    <title>Sabel Software | New</title>
 </svelte:head>
 <div class="content">
-    <h2>Neuen Kontakt erstellen</h2>
+    <h2>Neues Programm eintragen</h2>
     <div class="content-flex">
         <div class="input">
             <label for="nameInput">Name</label>

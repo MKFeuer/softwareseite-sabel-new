@@ -69,7 +69,7 @@
 </script>
 
 <svelte:head>
-    <title>T4A-Kontakte</title>
+    <title>Sabel Software</title>
     <meta name="description" content="Kontaktbuch der T4A-GBS-München" />
 </svelte:head>
 {#if FORM_VISIBLE.state === "main"}
@@ -114,7 +114,7 @@
             </tbody>
         </table>
 
-        <button onclick={createEntry}>Neuen Kontakt erstellen</button>
+        <button onclick={createEntry}>Neuen Programmeintrag erstellen</button>
     </div>
 {:else if FORM_VISIBLE.state === "delete"}
     <ReallyDelete />
