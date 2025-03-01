@@ -50,9 +50,6 @@ function initializeDatabase() {
 
     ];
 
-
-
-
     // Lösche die bestehende Datei, falls sie existiert
     if (fs.existsSync(jsonDataPath)) {
         fs.unlinkSync(jsonDataPath);
